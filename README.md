@@ -63,7 +63,6 @@
        - Lên [atbash cipher](https://www.dcode.fr/atbash-cipher) decode và ra được flag.
 2. ***ReadMyCert***
      - Description: How about we take you on an adventure on exploring certificate signing requests. Take a look at this CSR file [here](https://artifacts.picoctf.net/c/420/readmycert.csr).
-     ![atbash](https://user-images.githubusercontent.com/129378740/229092762-9d8f4c76-d665-4aa2-8fc3-ba6804e122f5.jpg)
      - Cách làm:
        - Lên trang web [csr decode](https://www.sslshopper.com/csr-decoder.html) để đọc file tải về và ra được flag
        ![image](https://user-images.githubusercontent.com/129378740/229095858-0f090867-211d-47ad-9d47-a457fc332a23.png)
