@@ -69,4 +69,24 @@
 3. ***Rotation***
      - Description: You will find the flag after decrypting this file. Download the encrypted flag [here](https://artifacts.picoctf.net/c/388/encrypted.txt).
      - Cách làm:
-       - Lên trang web [ceasar cipher decode](https://www.dcode.fr/caesar-cipher) copy đoạn text được mã hoá và ra flag.     
+       - Lên trang web [ceasar cipher decode](https://www.dcode.fr/caesar-cipher) copy đoạn text được mã hoá và ra flag.   
+## Reverse Engineering
+1. ***Ready Gladiator 0***
+     - Description: Can you make a CoreWars warrior that always loses, no ties? Your opponent is the Imp. The source is available [here](https://artifacts.picoctf.net/c/310/imp.red). If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this: nc saturn.picoctf.net 63422 < imp.red
+     - Cách làm:
+       - Mình gõ bừa như hình thì bỗng dưng ra flag=)
+       ![image](https://user-images.githubusercontent.com/129378740/229255994-1ed946b1-c371-4f7f-970b-c7b9d525aa04.png)
+2. ***Reverse***
+     - Description: Try reversing this file? Can ya? I forgot the password to this [file](https://artifacts.picoctf.net/c/275/ret). Please find it for me?
+     - Cách làm:
+       - Mình mở file trên ida, sau đó ấn vào main, ấn f5 để compile file và ra flag.  
+3. ***Safe Opener 2***
+     - Description: What can you do with this file? I forgot the key to my safe but this [file](https://artifacts.picoctf.net/c/287/SafeOpener.class) is supposed to help me with retrieving the lost key. Can you help me unlock my safe?
+     - Cách làm:
+       - Mở file trên notepad và ra flag.
+4. ***Timer***
+     - Description: You will find the flag after analysing this apk. Download [here](https://artifacts.picoctf.net/c/449/timer.apk).
+     - Cách làm:
+       - Mở file trên tool jadx và search từ khoá picoctf để ra flag.
+       ![image](https://user-images.githubusercontent.com/129378740/229256341-b0a534cc-a359-49e6-a7d6-8f6053ef0f89.png)
+## Forensics
