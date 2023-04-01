@@ -90,3 +90,39 @@
        - Mở file trên tool jadx và search từ khoá picoctf để ra flag.
        ![image](https://user-images.githubusercontent.com/129378740/229256341-b0a534cc-a359-49e6-a7d6-8f6053ef0f89.png)
 ## Forensics
+1. ***hideme***
+     - Description: Every file gets a flag. The SOC analyst saw one image been sent back and forth between two people. They decided to investigate and found out that there was more than what meets the eye [here](https://artifacts.picoctf.net/c/256/flag.png).
+     - Cách làm:
+       - Sử dụng binwalk để extract các file ẩn thì được 1  file secret.
+       - Mở file và ra được flag.
+       ![image](https://user-images.githubusercontent.com/129378740/229256792-c79b1766-8b8c-4ee8-920c-a82dd66c337f.png)
+2. ***PcapPoisoning***
+     - Description: How about some hide and seek heh? Download this [file](https://artifacts.picoctf.net/c/373/trace.pcap) and find the flag.
+     - Cách làm:
+       - Mở file trên wireshark, sort theo length và ra được flag
+       ![image](https://user-images.githubusercontent.com/129378740/229256981-3d038ae3-4e64-4e96-a9f4-46275d8a5adf.png)
+3. ***who is it***
+     - Description: Someone just sent you an email claiming to be Google's co-founder Larry Page but you suspect a scam. Can you help us identify whose mail server the email actually originated from? Download the email file [here](https://artifacts.picoctf.net/c/499/email-export.eml). Flag: picoCTF{FirstnameLastname}
+     - Cách làm:
+       - Mở file trên outlook, sau đó chọn property thì mình tìm được địa chỉ ip của người gửi
+       ![image](https://user-images.githubusercontent.com/129378740/229257161-52fda7bb-dd3d-4ed2-84ff-f626d474ab28.png)
+       - Sau đó mình lên tran web https://www.whatismyip.com/ip-whois-lookup/ để search địa chỉ ip đấy và có được tên của người gửi.
+       ![image](https://user-images.githubusercontent.com/129378740/229257250-368749b3-6f69-4d51-b6e8-f749c885b665.png)
+       - Copy tên gười gửi là có flag là picoCTF{WilhelmZwalina}.
+4. ***FindAndOpen***
+     - Description: Someone might have hidden the password in the trace file. Find the key to unlock this [file](https://artifacts.picoctf.net/c/492/flag.zip). [This tracefile](https://artifacts.picoctf.net/c/492/dump.pcap) might be good to analyze.
+     - Cách làm:
+       - Đầu tiên mở file pcap trên wiresahrk.
+       - Sau khi xem qua các packet thì em phát hiện 1 đoạn dã được mã hoá khá là sú. 
+       ![image](https://user-images.githubusercontent.com/129378740/229257481-fcc7593d-aedc-4f58-9bc7-fb1160d358ad.png)
+       - Copy đoạn đấy lại và xoá đi header ở đầu rồi đưa lên [base64 decode](https://www.base64decode.org/) để giải mã đoạn đó và mình có passwork của file zip.
+       ![image](https://user-images.githubusercontent.com/129378740/229257541-3b7138a0-5c79-4b28-82ca-15707ae4b267.png)
+       - Điền password vào file zip và có đuọc flag.
+       ![image](https://user-images.githubusercontent.com/129378740/229257596-68b3dc83-7c69-418e-831a-db1d6656334f.png)
+5. ***MSB***
+     - Description: This image passes LSB statistical analysis, but we can't help but think there must be something to the visual artifacts present in this image... Download the image [here](https://artifacts.picoctf.net/c/306/Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png)
+     - Cách làm:
+       - Sử dụng tool stegsolve sau đó chọn extract data rồi set RGB thành 777 thì dược 1 đoạn text như sau.
+       ![image](https://user-images.githubusercontent.com/129378740/229257991-889cbc7d-2f26-4168-8e03-e71f067d3b25.png)
+       - Lưu file text lại và search picoctf và ra được flag.
+       ![image](https://user-images.githubusercontent.com/129378740/229258021-a4a3a655-e60a-432a-9158-333b860a21f5.png)
